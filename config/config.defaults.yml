@@ -388,6 +388,7 @@ production: &production_settings
   eager_load: true
 
   log_level: INFO
+  secret_key_base: "117b84444997ce119eff2828bd961c0a5b98e053233f6858a383284e1ed7d63410e28500c28cab3f9a29f772fdc4298a8649fffb201e0b35fe3c5153f27812e5"
 
 staging:
   <<: *production_settings
