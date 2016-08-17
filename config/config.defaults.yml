@@ -81,6 +81,7 @@ default: &default_settings
   #
   user_asset_host:
 
+
   # AWS keys
   aws_access_key_id: 'AKIAJLNJ47VBKGETBWFQ'
   aws_secret_access_key: "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"
