@@ -154,14 +154,14 @@ default: &default_settings
   smtp_email_address: "smtp.zoho.com"
   smtp_email_port: 465
   smtp_email_user_name: "naturalbeauty@natrella.co"
-  smtp_email_password: "hello2016"
+  smtp_email_password: "natrella2016"
   smtp_email_domain: "zoho.com"
 
   # This will be the from field in the mails sent from Sharetribe
-  sharetribe_mail_from_address: "hello@natrella.co"
+  sharetribe_mail_from_address: "naturalbeauty@natrella.co"
 
   # The address where the notifications of feedbacks from Sharetribe UI are sent
-  feedback_mailer_recipients:  'hello@natrella.co'
+  feedback_mailer_recipients:  'naturalbeauty@natrella.co'
 
   grid_listings_limit: 24
   map_listings_limit: 150
