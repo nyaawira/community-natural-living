@@ -26,6 +26,8 @@ staging:
     host: localhost
 
 production:
+    database: sharetribe_production
+    encoding: utf8
     host: <%= ENV["DATABASE_URL"] %>
 
 cucumber:
