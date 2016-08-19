@@ -151,11 +151,11 @@ default: &default_settings
   # For the domain part you can enter HELO domain, if needed. Google for more info. :)
   mail_delivery_method: smtp
 
-  smtp_email_address: "smtp.zoho.com"
+  smtp_email_address: "smtp.gmail.com"
   smtp_email_port: 465
-  smtp_email_user_name: "naturalbeauty@natrella.co"
-  smtp_email_password: "natrella2016"
-  smtp_email_domain: "zoho.com"
+  smtp_email_user_name: "natrellah@gmail.com"
+  smtp_email_password: "nyawira25"
+  smtp_email_domain: "gmail.com"
 
   # This will be the from field in the mails sent from Sharetribe
   sharetribe_mail_from_address: "naturalbeauty@natrella.co"
