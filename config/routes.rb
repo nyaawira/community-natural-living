@@ -6,6 +6,8 @@ Kassi::Application.routes.draw do
 
   mount Mercury::Engine => '/'
 
+  get '/.well-known/acme-challenge/:id' => 'pages#letsencrypt'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -460,4 +462,5 @@ Kassi::Application.routes.draw do
   #catches all non matched routes, shows 404 and logs more reasonably than the alternative RoutingError + stacktrace
 
   match "*path" => "errors#not_found", via: :all
+
 end
