@@ -1089,7 +1089,7 @@ en:
     manage_listings: "Manage posts"
     invite: "Invite new members"
     login: "Log in"
-    signup: "Sign up"
+    signup: "Create an Account"
     menu: Menu
   homepage:
     additional_private_listings_slate:
@@ -1159,7 +1159,7 @@ en:
       no_reviews: "No reviews"
       no_image: "No image"
       filter: Filter
-      this_is_private_community: "You need to sign up before you can view the content."
+      this_is_private_community: "You need to create an account before you can view the content."
     invitation_form:
       email: "Email address(es)"
       message: "A personal message"
@@ -1209,7 +1209,7 @@ en:
   landing_page:
     hero:
       search: Search
-      signup: "Sign up"
+      signup: "Create an account"
       search_placeholder: "What are you looking for?"
     listings:
       no_listing_image: "No picture"
@@ -1236,13 +1236,13 @@ en:
       send_feedback_to_admin: "Send message"
       to_see_what_others_have_suggested: "to see what other users have suggested, and vote for the ideas there."
       your_email_address: "Your email address (to contact you)"
-      connect: "Sign up"
+      connect: "Create an account"
       invite_your_friends: "Invite friends!"
       invite_your_neighbors: "Invite neighbors!"
       invite_your_friends_description: "The more people there are in %{service_name}, the more useful it is."
       invite_your_friends_invite_only_description: "People cannot join %{service_name} unless they are invited."
       join_without_facebook: "...or alternatively %{join_without_facebook_link}"
-      join_without_facebook_link: "sign up without using Facebook"
+      join_without_facebook_link: "creat an account without using Facebook"
     conversations:
       messages: Messages
       notifications: Notifications
@@ -1280,7 +1280,7 @@ en:
       notifications: Notifications
       requests: "Friend requests"
       settings: Settings
-      sign_up: "Sign up"
+      sign_up: "Create an account"
     notifications:
       listing_could_not_be_saved: "Post could not be saved. Please try again. If the problem persists, please %{contact_admin_link}."
       contact_admin_link_text: "contact the admin"
@@ -1830,9 +1830,9 @@ en:
       username_is_invalid: "Username is invalid. Allowed characters are letters, numbers and underscore."
       visible_only_to_you: "visible only to you and the marketplace admin"
       visible_to_everybody: "visible to everybody"
-      create_account_with_facebook: "Sign up with Facebook"
+      create_account_with_facebook: "Create an account with Facebook"
       OR: OR
-      signup_with_email: "Sign up with email"
+      signup_with_email: "Create an account with email"
     profile_feedback:
       grade: "grade:"
       and_gave_following_feedback: "and gave the following feedback"
@@ -2159,7 +2159,7 @@ en:
       settings: Settings
       logout: "Log out"
       login: "Log in"
-      signup: "Sign up"
+      signup: "Create an account"
       admin_dashboard: "Admin dashboard"
       language: Language
   will_paginate:
