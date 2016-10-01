@@ -4,14 +4,14 @@ en:
       edit:
         edit_listing_category: "Edit category '%{category}'"
       index:
-        listing_categories: "Listing categories"
+        listing_categories: "Post categories"
         create_a_new_category: "+ Create a new category"
         remove_category_confirmation: "Are you sure you want to remove category '%{category_name}'?"
         saving_order: "Saving category order"
         save_order_successful: "Successfully saved category order"
         save_order_error: "An error occurred while saving category order. Please refresh the page and try again."
       new:
-        new_listing_category: "New listing category"
+        new_listing_category: "New post category"
       form:
         category_name:
           category_title: "Category title"
@@ -20,7 +20,7 @@ en:
           no_parent: "No parent"
         category_transaction_types:
           transaction_types: "Order types"
-          transaction_types_description: "Order types determine what kind of order process is allowed with listings in this category. For example, is it only selling, or are renting and giving away for free also allowed."
+          transaction_types_description: "Order types determine what kind of order process is allowed with posts in this category. For example, is it only selling, or are renting and giving away for free also allowed."
           select_all: "Select all"
           clear_all: "Clear all"
         buttons:
@@ -31,8 +31,8 @@ en:
         remove_category_name: "Remove category '%{category_name}'"
         warning_remove_effects: "Warning! Removing category '%{category_name}' will have the following effects:"
         warning_listing_will_be_moved:
-          one: "There is %{count} listing in the category. It will be moved to the selected category."
-          other: "There are %{count} listings in the category. They will be moved to the selected category."
+          one: "There is %{count} post in the category. It will be moved to the selected category."
+          other: "There are %{count} posts in the category. They will be moved to the selected category."
         warning_custom_field_will_be_moved:
           one: "There is %{count} custom field in the category. It will be moved to the selected category."
           other: "There are %{count} custom field in the category. They will be moved to the selected category."
@@ -40,8 +40,8 @@ en:
           one: "There is %{count} subcategory in the category. It will be removed."
           other: "There are %{count} subcategories in the category. They will be removed."
         warning_with_subcategories_listing_will_be_moved:
-          one: "There is %{count} listing in the category and subcategories. It will be moved to the selected category."
-          other: "There are %{count} listings in the category and subcategories. They will be moved to the selected category."
+          one: "There is %{count} post in the category and subcategories. It will be moved to the selected category."
+          other: "There are %{count} posts in the category and subcategories. They will be moved to the selected category."
         warning_with_subcategories_custom_field_will_be_moved:
           one: "There is %{count} custom field in the category and subcategories. It will be moved to the selected category."
           other: "There are %{count} custom field in the category and subcategories. They will be moved to the selected category."
@@ -75,8 +75,8 @@ en:
         edit_info: "Edit information"
         see_how_it_looks_like: "See how it looks"
         verification_to_post_listings_info_content: "Info text to non-verified users"
-        verification_to_post_listings_info_content_description: "You currently require your users to be verified manually by you before they can post listings. Here you can set the default text that is shown to non-verified users when they try to post a new listing."
-        verification_to_post_listings_info_content_default: "%{service_name} requires people to be verified manually by admin before they can post listings. You have not yet been verified. Please %{contact_admin_link} to be verified."
+        verification_to_post_listings_info_content_description: "You currently require your users to be verified manually by you before they can post. Here you can set the default text that is shown to non-verified users when they try to add a new post."
+        verification_to_post_listings_info_content_default: "%{service_name} requires people to be verified manually by admin before they can post. You have not yet been verified. Please %{contact_admin_link} to be verified."
         contact_admin_link_text: "contact the admin"
         save: "Save settings"
         transaction_agreement: "Transaction agreement"
@@ -105,7 +105,7 @@ en:
         custom_color1_instructions_text: "You can change the main color of the user interface by entering a hex color value. <a href=\"http://www.colorpicker.com/?colorcode=D96E21\" target=\"_blank\" rel=\"noreferrer\">ColorPicker.com</a> can help you choose the color and copy the code here."
         custom_color2_instructions_text: "You can change the color of the %{post_new_listing} button by entering a hex color value. <a href=\"http://www.colorpicker.com/?colorcode=00a26c\" target=\"_blank\" rel=\"noreferrer\">ColorPicker.com</a> can help you choose the color and copy the code here."
         default_browse_view: "Default browse view"
-        default_browse_view_instructions_text: "Default browse view is used on the homepage to set how the listings are displayed by default."
+        default_browse_view_instructions_text: "Default browse view is used on the homepage to set how the posts are displayed by default."
         grid: Grid
         list: List
         map: Map
@@ -186,8 +186,8 @@ en:
         access: "Access preferences"
         join_with_invite_only: "Allow users to join only with an invite from another user"
         users_can_invite_new_users: "Allow all users to invite new users"
-        private: "Allow only registered users to see listings and user profiles (make marketplace private)"
-        require_verification_to_post_listings: "Allow only users verified by admin to post new listings"
+        private: "Allow only registered users to see posts and user profiles (make marketplace private)"
+        require_verification_to_post_listings: "Allow only users verified by admin to post"
         search_preferences: "Search preferences"
         default_search_type: "Search type: %{select_search_type}"
         keyword_search: "Keyword search"
@@ -196,18 +196,18 @@ en:
         select_distance_unit: "Show distance in %{distance_units_selector}"
         km: km
         miles: miles
-        show_only_nearby: "Show only nearby listings with location search"
-        listing_preferences: "Listing preferences"
+        show_only_nearby: "Show only nearby posts with location search"
+        listing_preferences: "Post preferences"
         transaction_preferences: "Order preferences"
-        show_listing_publishing_date: "Display publishing date of the listing on the listing page"
-        show_category_in_listing_list: "Display listing type in list view"
-        hide_expiration_date: "Do not require listings to have an expiration date"
-        listing_comments_in_use: "Allow users to post comments to listings (viewable to all other users)"
+        show_listing_publishing_date: "Display publishing date of the post on the post page"
+        show_category_in_listing_list: "Display post type in list view"
+        hide_expiration_date: "Do not require posts to have an expiration date"
+        listing_comments_in_use: "Allow users to add comments to posts (viewable to all other users)"
         email_preferences: "Email preferences"
         automatic_newsletters: "Send automatic daily / weekly newsletters to all users (unless they opt out)"
         email_admins_about_new_members: "Send admins an email whenever a new user signs up"
         google_analytics_key: "Google Analytics tracking ID"
-        twitter_handle: "Twitter handle (used with tweet button in listing page)"
+        twitter_handle: "Twitter handle (used with tweet button in post page)"
         update_settings: "Save settings"
         automatically_confirmed: "Order will be automatically marked as completed %{days_dropdown} days after the payment has been made. If escrow system is in use, the money will be released to the provider at this point."
         automatically_confirmed_no_escrow: "Order will be automatically marked as completed %{days_dropdown} days after the payment has been made"
@@ -247,8 +247,8 @@ en:
       social_media:
         social_media: "Social media"
         twitter_handle: "Twitter handle"
-        twitter_handle_info_text: "Username of the Twitter account of your marketplace (if you have one). It will be mentioned when people use the tweet button on the listing page."
-        twitter_handle_info_text_with_instructions: "Username of the Twitter account of your marketplace (if you have one). It will be mentioned when people use the tweet button on the listing page. %{instructions_link}."
+        twitter_handle_info_text: "Username of the Twitter account of your marketplace (if you have one). It will be mentioned when people use the tweet button on the post page."
+        twitter_handle_info_text_with_instructions: "Username of the Twitter account of your marketplace (if you have one). It will be mentioned when people use the tweet button on the post page. %{instructions_link}."
         twitter_instructions_link_text: "Read more"
         twitter_handle_placeholder: username
         invalid_twitter_handle: "Twitter handle should contain only at maximum 15 alphanumeric (letters A-Z and numbers 0-9) characters."
@@ -319,9 +319,9 @@ en:
         paypal_admin_account: Payments
     custom_fields:
       edit:
-        edit_listing_field: "Edit listing field '%{field_name}'"
+        edit_listing_field: "Edit post field '%{field_name}'"
       edit_price:
-        description: "The minimum and maximum price only affect the filter. They do not set a limit for listing prices."
+        description: "The minimum and maximum price only affect the filter. They do not set a limit for post prices."
         edit_price_field: "Edit price field"
         show_price_filter_homepage: "Show price filter on homepage"
         price_min: "Filter minimum price"
@@ -331,22 +331,22 @@ en:
         this_field_is_required: "This field is required"
       form:
         field_required:
-          this_field_is_required: "Make it mandatory to fill in this field when creating a new listing"
-          this_field_is_required_checkbox: "Make it mandatory to fill in this field when creating a new listing (user has to select at least one option)"
+          this_field_is_required: "Make it mandatory to fill in this field when creating a new post"
+          this_field_is_required_checkbox: "Make it mandatory to fill in this field when creating a new post (user has to select at least one option)"
         search_filter:
           search_filter: "Display a filter based on this field on the homepage"
           date_cant_be_filtered: "There's no filter available for date field."
           text_cant_be_filtered: "There's no filter for text field. The main text search searches from text fields."
       index:
-        listing_fields: "Listing fields & filters"
-        listing_fields_help: "Here you can edit the fields that users have to fill in when they create a new listing. Please note that some fields are predefined and cannot be edited."
+        listing_fields: "Post fields & filters"
+        listing_fields_help: "Here you can edit the fields that users have to fill in when they create a new post. Please note that some fields are predefined and cannot be edited."
         add_new_field: "Add new field:"
         remove_field_confirmation: "Are you sure you want to remove field '%{field_name}'?"
         cancel: Cancel
         save: Save
         field_title: "Field title"
         field_type: "Field type"
-        categories: "Listing categories where the field is used"
+        categories: "Post categories where the field is used"
         select_all: "Select all"
         clear_all: "Clear all"
         options: Options
@@ -360,7 +360,7 @@ en:
         maximum_value: Maximum
         allow_decimals: "Allow decimals"
       new:
-        new_listing_field: "New listing field"
+        new_listing_field: "New post field"
       field_types:
         text: Text
         number: Number
@@ -426,8 +426,8 @@ en:
         update_failure: "Could not save changes. Error: %{error_msg}"
         delete: "Delete order type"
         confirm_delete_order_type:
-          one: "There is %{count} listing with this order type. If you delete the order type, this listing will be closed. Are you sure you want to delete the order type?"
-          other: "There are %{count} listings with this order type. If you delete the order type, those listings will be closed. Are you sure you want to delete the order type?"
+          one: "There is %{count} post with this order type. If you delete the order type, this post will be closed. Are you sure you want to delete the order type?"
+          other: "There are %{count} posts with this order type. If you delete the order type, those posts will be closed. Are you sure you want to delete the order type?"
         can_not_delete_last: "You can't delete this order type because it's the only type in your marketplace."
         can_not_delete_only_one_in_categories: "You can't delete this order type because in following categories this order type is the only one in use: %{categories}"
       listing_shape_name: Name
@@ -435,22 +435,22 @@ en:
       action_button_label: "Checkout button label"
       action_button_placeholder: "E.g. Buy"
       open_listings_warning:
-        one: "There is %{count} open listing with this order type. If you change any of the settings below, that listing will retain the old settings. The listing can be changed to the new settings by editing it manually. If you don't want to have the listing with the old settings visible on your site, you can close it by clicking the button below."
-        other: "There are %{count} open listings with this order type. If you change any of the settings below, those listings will retain the old settings. Those listings can be changed to the new settings by editing them manually. If you don't want to have any listings with the old settings visible on your site, you can close them by clicking the button below."
+        one: "There is %{count} open post with this order type. If you change any of the settings below, that post will retain the old settings. The post can be changed to the new settings by editing it manually. If you don't want to have the post with the old settings visible on your site, you can close it by clicking the button below."
+        other: "There are %{count} open posts with this order type. If you change any of the settings below, those posts will retain the old settings. Those posts can be changed to the new settings by editing them manually. If you don't want to have any posts with the old settings visible on your site, you can close them by clicking the button below."
       close_listings_action:
-        one: "Close %{count} listing"
-        other: "Close %{count} listings"
+        one: "Close %{count} post"
+        other: "Close %{count} posts"
       confirm_close_listings_action:
-        one: "Are you sure you want to close %{count} listing?"
-        other: "Are you sure you want to close %{count} listings?"
-      successfully_closed: "Successfully closed listings"
+        one: "Are you sure you want to close %{count} post?"
+        other: "Are you sure you want to close %{count} posts?"
+      successfully_closed: "Successfully closed posts"
       successfully_deleted: "Successfully deleted order type '%{order_type}'"
       pricing_and_checkout_title: "Pricing & checkout"
       online_payments_label: "Allow sellers to accept payments online"
       shipping_label: "Allow sellers to define a shipping fee"
-      price_label: "Allow sellers to add a price to their listings"
+      price_label: "Allow sellers to add a price to their posts"
       units_title: "Pricing units"
-      units_desc: "If you have enabled pricing units, the listing price is displayed as \"price per pricing unit\". An example: \"$39 per hour\"."
+      units_desc: "If you have enabled pricing units, the post price is displayed as \"price per pricing unit\". An example: \"$39 per hour\"."
       units:
         piece: "Per piece"
         hour: "Per hour"
@@ -572,8 +572,8 @@ en:
       accept_request: "Accept the request"
       reject_offer: "Not this time"
       reject_request: "Not this time"
-      close_listing: "Close the listing %{listing_title_link}"
-      update_later: "Leave the listing open"
+      close_listing: "Close the post %{listing_title_link}"
+      update_later: "Leave the post open"
       optional_message: "Optional message"
       price_to_pay: "Total price to be paid"
       you_need_to_fill_payout_details_before_accepting: "You need to fill in payout details before you can accept the request and receive the payment. Go to %{payment_settings_link} to fill in the details."
@@ -619,7 +619,7 @@ en:
       canceled_request: "Order canceled."
       canceled_offer: "Offer canceled."
       message_from: "Message from %{person}"
-      about_listing: "About listing %{listing_title}"
+      about_listing: "About post %{listing_title}"
       free_message: "Free message"
       message_content_not_available: "Message content not available"
     message:
@@ -645,10 +645,10 @@ en:
       you_will_get_notified: "You will get an email notification when %{person} answers you."
       title: Title
       send_message_to_user: "Send message to %{person}"
-      about_listing: "About listing %{listing_title}"
+      about_listing: "About post %{listing_title}"
       author_has_to_accept_request: "%{author_name} needs to accept the request before you can pay"
     show:
-      in_response_to_listing: "about listing"
+      in_response_to_listing: "about post"
       message_sent_by: "Message sent by"
       message_sent_to: "Message sent to"
       send_reply: "Send reply"
@@ -819,7 +819,7 @@ en:
       cancel_it_link_text: "cancel it"
     payment_settings_reminder:
       remember_to_add_payment_details: "Remember to add your payment details to receive payments"
-      you_have_added_listing_with_payment: "You have added a listing %{listing_link} with payment. However, you haven't yet added your payment details. In order to receive the payment you have to add your payment information."
+      you_have_added_listing_with_payment: "You have added a post %{listing_link} with payment. However, you haven't yet added your payment details. In order to receive the payment you have to add your payment information."
       please_go_to_payment_settings: "Please go to your %{payment_settings_link} and fill in the required payment information."
       payment_settings_link: "payment settings"
     transaction_confirmed:
@@ -880,11 +880,11 @@ en:
       join_now: "Join now"
       invitation_code: "Invitation code: %{code}"
     new_comment:
-      has_commented_your_listing_in_kassi: "%{author} has commented on your listing '%{listing}'."
+      has_commented_your_listing_in_kassi: "%{author} has commented on your post '%{listing}'."
       view_comment: "View comment"
-      you_have_a_new_comment: "%{author} has commented on your listing in %{service_name}"
-      listing_you_follow_has_a_new_comment: "%{author} has commented on a listing you follow in %{service_name}"
-      has_commented_listing_you_follow_in_kassi: "%{author} has commented on the listing '%{listing}' you are following in %{service_name}."
+      you_have_a_new_comment: "%{author} has commented on your post in %{service_name}"
+      listing_you_follow_has_a_new_comment: "%{author} has commented on a post you follow in %{service_name}"
+      has_commented_listing_you_follow_in_kassi: "%{author} has commented on the post '%{listing}' you are following in %{service_name}."
     new_message:
       view_message: "View message"
       has_sent_you_a_message_in_kassi: "%{sender} has sent you a message in %{service_name}."
@@ -920,18 +920,18 @@ en:
       you_can_give_feedback_to: "You haven't yet given feedback to %{name}."
       view_feedback: "View feedback"
     new_update_to_listing:
-      listing_you_follow_has_been_updated: "Listing you follow has been updated"
-      has_updated_listing_you_follow_in_kassi: "%{author} has updated the listing '%{listing}' you are following in %{service_name}."
+      listing_you_follow_has_been_updated: "Post you follow has been updated"
+      has_updated_listing_you_follow_in_kassi: "%{author} has updated the post '%{listing}' you are following in %{service_name}."
       view_changes: "View changes"
     community_updates:
-      added_offer: "%{name_link} added a listing:"
-      added_request: "%{name_link} added a listing:"
-      added_listing: "%{name_link} added a listing:"
+      added_offer: "%{name_link} added a post:"
+      added_request: "%{name_link} added a post:"
+      added_listing: "%{name_link} added a post:"
       update_mail_title: "%{title_link} update"
       title_link_text: "%{community_name}"
       intro_paragraph: "Here are some of the things that happened on %{community_link} during the past %{time_since_last_update}."
       intro_paragraph_link_text: "%{community_name}"
-      post_a_new_listing: "Post a new listing!"
+      post_a_new_listing: "Add a new post!"
       reduce_email_footer_text: "Too much email? %{settings_link} or %{unsubscribe_link}."
       settings_link_text: "Edit your email settings here"
       unsubscribe_link_text: unsubscribe
@@ -952,8 +952,8 @@ en:
       you_have_time_to_accept: "You need to accept or reject the request within %{payment_expires_in}. If you accept within this timeframe, the payment will go through. If you don't accept, the request will be automatically rejected and you will not get paid."
       click_here_to_reply: "Click here to respond to the request"
     transaction_preauthorized_reminder:
-      subject: "Remember to accept the request from %{requester} about listing %{listing_title}"
-      remember_to_accept: "Remember to accept the request from %{requester} about listing \"%{listing_title}\". %{requester} has already paid for the listing. You have to accept the request in order to receive the payment."
+      subject: "Remember to accept the request from %{requester} about post %{listing_title}"
+      remember_to_accept: "Remember to accept the request from %{requester} about post \"%{listing_title}\". %{requester} has already paid for the post. You have to accept the request in order to receive the payment."
       one_day_left: "If you don't accept the request within one day the request will be automatically rejected and you will not get paid."
       click_here_to_reply: "Click here to respond to the request"
     welcome_email:
@@ -980,10 +980,10 @@ en:
       contact_support_link_text: "contact our support"
       admin_panel_link_text: "admin panel"
     new_listing_by_followed_person:
-      subject: "%{author_name} has posted a new listing in %{service_name}"
-      has_posted_a_new_listing: "%{author_name} has posted a new listing:"
+      subject: "%{author_name} has posted a new post in %{service_name}"
+      has_posted_a_new_listing: "%{author_name} has posted a new post:"
       you_are_receiving_this_because: "You received this notification because you follow %{author_name}."
-      view_listing: "View listing"
+      view_listing: "View post"
     new_member_notification:
       new_member_has_joined: "A new member has joined %{community}. They may still have to confirm their email address."
       this_is_automatic_message: "This is an automatic message sent to administrators of %{community}."
@@ -1006,7 +1006,7 @@ en:
     paypal:
       buyer_cannot_pay_error: "The payment has been declined by PayPal. Please contact their Customer Service for more information: %{customer_service_link}"
       pending_review_error: "The payment was submitted but was flagged by PayPal as 'requiring a review'. When PayPal completes the review, the payment will be automatically authorized."
-      seller_express_checkout_disabled: "PayPal Express Checkout has been disabled for the listing author's PayPal account. Please contact the author and let them know that there's an issue with their PayPal account, and advise them to contact PayPal Customer Service."
+      seller_express_checkout_disabled: "PayPal Express Checkout has been disabled for the post author's PayPal account. Please contact the author and let them know that there's an issue with their PayPal account, and advise them to contact PayPal Customer Service."
       generic_error: "An error occurred during the payment process. Could not finalize your PayPal payment."
       cancel_error: "An error occurred during cancellation. Could not finalize cancel."
       accept_authorization_error: "An error occurred while trying to accept preauthorized Paypal payment. Please, try again."
@@ -1021,7 +1021,7 @@ en:
     error_410:
       page_removed: "Page removed"
       page_you_requested_has_been_removed: "The page you requested has been removed."
-      page_removed_reason: "There are a few possible reasons for this. For example, a user might have removed their account or a listing might have been removed."
+      page_removed_reason: "There are a few possible reasons for this. For example, a user might have removed their account or a post might have been removed."
     error_410_title: "page removed"
     error_500:
       temporary_unavailable: "Marketplace temporarily unavailable"
@@ -1071,14 +1071,14 @@ en:
     login:
       logged_in_to_kassi: "%{name} logged in to %{service_name} %{time_ago}."
     comment:
-      commented: "%{commenter_name} commented on listing %{listing_title} %{time_ago}."
+      commented: "%{commenter_name} commented on post %{listing_title} %{time_ago}."
       offer_partitive: offer
       request_partitive: request
   header:
     about: About
     home: Home
     members: Community
-    new_listing: "New listing"
+    new_listing: "New post"
     mobile_version: "Mobile version"
     offers: Offers
     requests: Requests
@@ -1086,7 +1086,7 @@ en:
     create_new_marketplace: "Create a new marketplace"
     contact_us: "Contact us"
     profile: Profile
-    manage_listings: "Manage listings"
+    manage_listings: "Manage posts"
     invite: "Invite new members"
     login: "Log in"
     signup: "Sign up"
@@ -1132,16 +1132,16 @@ en:
     grid_item:
       processing_uploaded_image: "(Processing uploaded image...)"
     index:
-      no_listings_with_your_search_criteria: "Sorry, no listings could be found for your search criteria. Maybe try other search terms?"
-      no_listings_notification: "No listings. %{add_listing_link}."
-      add_listing_link_text: "Add new listing"
-      open_listing: "open listing"
-      open_listings: "open listings"
+      no_listings_with_your_search_criteria: "Sorry, no posts could be found for your search criteria. Maybe try other search terms?"
+      no_listings_notification: "No posts. %{add_listing_link}."
+      add_listing_link_text: "Add new post"
+      open_listing: "open post"
+      open_listings: "open posts"
       private_listing_notification_log_in: "log in"
       is: is
       are: are
       what_do_you_need: "What are you looking for?"
-      post_new_listing: "Post a new listing"
+      post_new_listing: "Add a new post"
       are_offering: offer
       add_news_item: "Add an article"
       lend_rent_help_carpool: "Sell, lend, help, share rides"
@@ -1194,7 +1194,7 @@ en:
       map_button: Map
       grid_button: Grid
       list_button: List
-      all_listing_types: "All listing types"
+      all_listing_types: "All post types"
       all_categories: "All categories"
     errors:
       search_engine_not_responding: "Search is currently unavailable. Try searching again soon."
@@ -1282,7 +1282,7 @@ en:
       settings: Settings
       sign_up: "Sign up"
     notifications:
-      listing_could_not_be_saved: "Listing could not be saved. Please try again. If the problem persists, please %{contact_admin_link}."
+      listing_could_not_be_saved: "Post could not be saved. Please try again. If the problem persists, please %{contact_admin_link}."
       contact_admin_link_text: "contact the admin"
       test_welcome_email_delivered_to: "A test email was sent to %{email}."
       something_went_wrong: "Something went wrong"
@@ -1296,7 +1296,7 @@ en:
       additional_email_confirmed: "The email you entered is now confirmed."
       could_not_get_email_from_facebook: "Could not get email address from Facebook and can't create an account without email."
       facebook_email_unconfirmed: "The email address '%{email}' associated with your Facebook account is already used but it hasn't been confirmed yet. Please confirm the email address before logging in with Facebook."
-      create_new_listing: "Create another listing"
+      create_new_listing: "Create another post"
       create_one_here: "create one here"
       email_confirmation_sent_to_new_address: "Email confirmation is now sent to the new address."
       email_not_found: "The email you gave was not found from %{service_name} database."
@@ -1324,13 +1324,13 @@ en:
       offer_accepted: "Offer accepted"
       offer_confirmed: "Offer confirmed"
       offer_closed: "Offer closed"
-      listing_created_successfully: "Listing created successfully. %{new_listing_link}."
+      listing_created_successfully: "Post created successfully. %{new_listing_link}."
       offer_rejected: "Offer rejected"
       offer_canceled: "Offer canceled"
-      listing_updated_successfully: "Listing updated successfully"
+      listing_updated_successfully: "Post updated successfully"
       only_kassi_administrators_can_access_this_area: "Only %{service_name} administrators can access this area"
-      only_listing_author_can_close_a_listing: "Only listing author can close a listing"
-      only_listing_author_can_edit_a_listing: "Only listing author can edit a listing"
+      only_listing_author_can_close_a_listing: "Only post author can close a post"
+      only_listing_author_can_edit_a_listing: "Only post author can edit a post"
       payment_successful: "Payment successful"
       payment_canceled: "Payment cancelled"
       error_in_payment: "Error in payment. If you didn't complete the payment yet, try again. If you did, please send us feedback."
@@ -1363,15 +1363,15 @@ en:
       you_are_not_allowed_to_give_feedback_on_this_transaction: "You are not authorized to give feedback on this event"
       you_are_not_authorized_to_do_this: "You are not authorized to do this"
       you_are_not_authorized_to_view_this_content: "You are not authorized to view this content"
-      listing_closed: "This listing has been closed"
+      listing_closed: "This post has been closed"
       send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
       you_cannot_reply_to_a_closed_offer: "You cannot reply to a closed offer"
       you_cannot_send_message_to_yourself: "You cannot send a message to yourself"
-      you_followed_listing: "You are now following this listing"
+      you_followed_listing: "You are now following this post"
       you_have_already_given_feedback_about_this_event: "You have already given feedback about this event"
       you_are_now_member: "Welcome to %{service_name}!"
       you_are_already_member: "You are already a member of %{service_name}. Welcome back!"
-      you_must_log_in_to_create_new_listing: "You must log in to %{service_name} to create a new listing. If you don't have an account you can %{sign_up_link}."
+      you_must_log_in_to_create_new_listing: "You must log in to %{service_name} to create a new post. If you don't have an account you can %{sign_up_link}."
       additional_email_confirmed_dashboard: "Your email is now confirmed."
       you_must_log_in_to_give_feedback: "You must log in to give feedback"
       you_must_log_in_to_invite_new_users: "You must log in to invite new users to %{service_name}"
@@ -1389,7 +1389,7 @@ en:
       you_must_log_in_to_confirm_or_cancel: "You must log in to cancel or confirm the transaction"
       you_need_to_confirm_your_account_first: "You need to confirm your email."
       you_must_fill_all_the_fields: "You must fill all the fields"
-      you_unfollowed_listing: "You are no longer following this listing"
+      you_unfollowed_listing: "You are no longer following this post"
       joining_community_failed: "Joining failed"
       can_not_login_with_private_user: "You cannot log in with your personal account. Log in with an organization account or create a new account."
       can_not_delete_email: "You cannot remove the email address"
@@ -1412,32 +1412,32 @@ en:
       payments: Payments
   listings:
     bubble_listing_not_visible:
-      listing_not_visible: "You do not have permission to view this listing."
+      listing_not_visible: "You do not have permission to view this post."
     comment:
       wrote: wrote
       send_private_message: "Send private message to %{person}"
       delete: delete
       are_you_sure: "Are you sure you want to delete the comment?"
     comment_form:
-      ask_a_question: "Comment on the listing or ask for more details. All the other users will be able to see your comment."
+      ask_a_question: "Comment on the post or ask for more details. All the other users will be able to see your comment."
       log_in: "log in"
       send_comment: "Send comment"
       to_send_a_comment: "to send a new comment."
       write_comment: "Write a new comment:"
-      you_cannot_send_a_new_comment_because_listing_is_closed: "You cannot send new comments because this listing is closed."
+      you_cannot_send_a_new_comment_because_listing_is_closed: "You cannot send new comments because this post is closed."
       you_must: "You must"
       subscribe_to_comments: "Notify me of new comments and updates"
     edit:
-      edit_listing: "Edit listing"
+      edit_listing: "Edit post"
     edit_links:
-      close_listing: "Close listing"
-      edit_listing: "Edit listing"
-      reopen_listing: "Reopen listing"
+      close_listing: "Close post"
+      edit_listing: "Edit post"
+      reopen_listing: "Reopen post"
       move_to_top: "Move to top of homepage"
       show_in_updates_email: "Show in the next newsletter"
       show_in_updates_email_loading: Loading...
       show_in_updates_email_error: "Couldn't reach server. Try again after page refresh."
-      show_in_updates_email_success: "This listing will be shown in the next automatic update email sent to the users"
+      show_in_updates_email_success: "This post will be shown in the next automatic update email sent to the users"
     map:
       open_in_google_maps: "Open in Google Maps"
     error:
@@ -1483,7 +1483,7 @@ en:
         processing: Processing...
         loading_image: Loading...
         image_uploading_in_progress: "Image upload in progress..."
-        processing_takes_a_while: "All images uploaded! Processing them will take a bit of time, but it's ok to save the listing and move on."
+        processing_takes_a_while: "All images uploaded! Processing them will take a bit of time, but it's ok to save the post and move on."
         this_may_take_a_while: "this only takes a second"
         percentage_loaded: "%{percentage}%"
         uploading_failed: "Image uploading failed"
@@ -1515,7 +1515,7 @@ en:
         location: Location
         origin: Origin
       send_button:
-        save_listing: "Save listing"
+        save_listing: "Save post"
       share_type:
         select: Select
         borrow: Borrowing
@@ -1535,7 +1535,7 @@ en:
         comma_separate: "(comma separate)"
         tags: Tags
       title:
-        listing_title: "Listing title"
+        listing_title: "post title"
       valid_until:
         valid_until: "Expiration date"
       valid_until_radio_buttons:
@@ -1592,19 +1592,19 @@ en:
       how_paypal_works: "How PayPal Works"
       payment_help: "Payment help"
     new:
-      post_a_new_listing: "Post a new listing"
+      post_a_new_listing: "Add a new post"
       listing: listing
       selected_category: "Category: %{category}"
       selected_subcategory: "Subcategory: %{subcategory}"
-      selected_transaction_type: "Listing type: %{transaction_type}"
+      selected_transaction_type: "Posting type: %{transaction_type}"
       select_category: "Select category"
       select_subcategory: "Select subcategory"
-      select_transaction_type: "Select listing type"
-      you_need_to_fill_payout_details_before_accepting: "You need to fill in payout details before you can post a listing. Go to %{payment_settings_link} to fill in the details."
+      select_transaction_type: "Select posting type"
+      you_need_to_fill_payout_details_before_accepting: "You need to fill in payout details before you can add a new post. Go to %{payment_settings_link} to fill in the details."
       contact_admin_link_text: "contact the administrator"
-      community_not_configured_for_payments: "%{service_name} hasn't been configured for payments, so you cannot post new listings yet. Please %{contact_admin_link} for details."
+      community_not_configured_for_payments: "%{service_name} hasn't been configured for payments, so you cannot add a new post yet. Please %{contact_admin_link} for details."
       payment_settings_link: "payment settings"
-      community_not_configured_for_payments_admin: "%{service_name} hasn't been configured for payments, so you cannot post new listings yet. Go to %{payment_settings_link} to fill in the payment details."
+      community_not_configured_for_payments_admin: "%{service_name} hasn't been configured for payments, so you cannot add a new post yet. Go to %{payment_settings_link} to fill in the payment details."
     quantity:
       hour: "Number of hours:"
       day: "Number of days:"
@@ -1615,7 +1615,7 @@ en:
     quantity_placeholder: Quantity
     please_comment: Comment
     reply_link:
-      listing_closed: "Listing is closed"
+      listing_closed: "Post is closed"
     show:
       add_your_phone_number: "Add your phone number"
       add_profile_picture: "Add profile picture"
@@ -1627,7 +1627,7 @@ en:
       inquiry: Announcement
       item_offer_trade: "Swap offer"
       item_request_trade: "Swap request"
-      no_description: "This listing doesn't have description"
+      no_description: "This posting doesn't have description"
       no_image: "No image"
       no_reviews: "No reviews received"
       offer: Offer
@@ -1645,7 +1645,7 @@ en:
       times_viewed: Viewed
       processing_uploaded_image: "(Processing uploaded image...)"
       price_excludes_vat: "(excludes VAT)"
-      listing_created_at: "Listing created"
+      listing_created_at: "Post created"
       price:
         per_quantity_unit: "per %{quantity_unit}"
         per_day: "per day"
@@ -1726,7 +1726,7 @@ en:
   paypal_accounts:
     payout_info_title: "Receiving funds"
     paypal_account_email_connected: "<del>Connect PayPal account</del> Completed!"
-    payout_info_paypal: "%{service_name} uses PayPal as its payment provider. A %{create_paypal_account_link} is required in order to accept payments for your listings, and must be connected to %{service_name}."
+    payout_info_paypal: "%{service_name} uses PayPal as its payment provider. A %{create_paypal_account_link} is required in order to accept payments for your postss, and must be connected to %{service_name}."
     paypal_billing_agreement_made: "<del>Grant %{service_name} permission to charge a transaction fee</del> Completed!"
     commission_permission_needed: "You will also need to grant %{service_name} permission to charge a transaction fee."
     create_paypal_account_link_text: "PayPal account"
@@ -1775,12 +1775,12 @@ en:
     paypal_account_connected_title: "PayPal account connected"
     paypal_account_connected: "The PayPal account <%{email}> has been connected with %{service_name}."
     change_account: "Change PayPal account"
-    missing: "You have open listings but your Paypal account is not set up to receive payments. Connect your Paypal account and grant %{service_name} permission to charge a transaction fee from your %{settings_link}."
+    missing: "You have open posts but your Paypal account is not set up to receive payments. Connect your Paypal account and grant %{service_name} permission to charge a transaction fee from your %{settings_link}."
     from_your_payment_settings_link_text: "payment settings"
     redirect_message: "Redirecting you to PayPal. If nothing happens, click %{redirect_link}."
     redirect_link_text: here
     paypal_account_all_set_up: "Hooray, everything is set up!"
-    can_receive_payments: "You can now receive payments for your listings."
+    can_receive_payments: "You can now receive payments for your posts."
     paypal_account_connected_summary: "PayPal account <%{email}> connected successfully"
     paypal_permission_granted_summary: "Permission for transaction fees granted"
   paypal:
@@ -1804,7 +1804,7 @@ en:
       invite_only_help_text_title: Invite-only
     inactive_notification:
       this_person_is_not_active_in_kassi: "This user is no longer active in %{service_name}"
-      inactive_description: "This user has stopped using %{service_name}. You cannot contact this user, give feedback to them or comment their listings."
+      inactive_description: "This user has stopped using %{service_name}. You cannot contact this user, give feedback to them or comment their posts."
     new:
       create_new_account: "Create account"
       email: "Email address"
@@ -1864,13 +1864,13 @@ en:
       reviews: "received reviews"
       listing: listing
       listings: listings
-      open_listing: "open listing"
-      open_listings: "open listings"
-      no_listings: "No listings"
-      no_open_listings: "No open listings"
+      open_listing: "open post"
+      open_listings: "open posts"
+      no_listings: "No posts"
+      no_open_listings: "No open posts"
       no_reviews: "No reviews"
-      show_all_listings: "Show all listings"
-      show_all_open_listings: "Show all open listings"
+      show_all_listings: "Show all posts"
+      show_all_open_listings: "Show all open posts"
       show_all_reviews: "Show all reviews"
     followed_people:
       you_follow_plural: "You follow %{count} people"
@@ -1934,7 +1934,7 @@ en:
       delete_account_confirmation_popup: "Are you sure you really want to delete your user account and permanently lose all data related to it? Account deletion cannot be reversed."
       email_addresses: "Email addresses"
       new_email: "New email address"
-      delete_personal_information: "If you delete your account, your personal information (name, phone number, address, email, profile picture, etc.) will be deleted permanently and can't be recovered. All the listings you have created will be removed. You won't be able to reactivate your account."
+      delete_personal_information: "If you delete your account, your personal information (name, phone number, address, email, profile picture, etc.) will be deleted permanently and can't be recovered. All the posts you have created will be removed. You won't be able to reactivate your account."
       delete_information_others_involved: "Information where other members are involved (conversations with other people, transactions you've made, reviews you've given to others, etc) is not removed when you delete your account. However, your name will no longer be displayed next to this information."
       unfinished_transactions: "Your account can't be deleted because you have ongoing transactions. Please complete all transactions before deleting your account."
       new_password: "New password"
@@ -1966,15 +1966,15 @@ en:
       email_about_new_messages: "...someone sends me a message"
       email_about_new_received_testimonials: "...someone gives me feedback"
       email_about_testimonial_reminders: "...I have forgotten to give feedback on an event"
-      email_daily_community_updates: "Send me a <b>daily</b> newsletter if there are new listings"
-      email_weekly_community_updates: "Send me a <b>weekly</b> newsletter if there are new listings"
+      email_daily_community_updates: "Send me a <b>daily</b> newsletter if there are new posts"
+      email_weekly_community_updates: "Send me a <b>weekly</b> newsletter if there are new posts"
       do_not_email_community_updates: "Don't send me newsletters"
       email_when_conversation_accepted: "...someone accepts my offer or request"
       email_when_conversation_rejected: "...someone rejects my offer or request"
       email_about_completed_transactions: "...someone marks my order as completed"
       email_about_new_payments: "...I receive a new payment"
       email_about_payment_reminders: "...I have forgotten to pay"
-      email_about_new_listings_by_followed_people: "...someone I follow posts a new listing"
+      email_about_new_listings_by_followed_people: "...someone I follow created a new post"
       unsubscribe_succesful: "Unsubscribe succesful"
       unsubscribe_info_text: "You will no longer receive these emails. Check your %{settings_link} to choose what kind of emails you want to receive from %{service_name}, or return to the %{homepage_link}."
       settings_link: settings
@@ -1998,7 +1998,7 @@ en:
       these_fields_are_shown_in_your: "This information is visible to all %{service_name} users"
       visible_to_everybody: "visible to everybody"
       visible_to_registered_users: "(visible to users that have logged in)"
-      default_in_listing: "(used only as a default when creating a new listing)"
+      default_in_listing: "(used only as a default when creating a new post)"
       invisible: "(not shown to other users)"
       image_is_processing: "Hang on tight. We are processing your profile picture. It will be ready in a minute or two."
     save_information: "Save information"
@@ -2040,7 +2040,7 @@ en:
       negative: Negative
       default_textual_feedback: "Everything went smoothly, thanks a lot!"
     testimonial:
-      about_listing: "about listing"
+      about_listing: "about post"
   date:
     formats:
       long_with_abbr_day_name: "%a, %b %d, %Y"
@@ -2155,7 +2155,7 @@ en:
       user: User
       inbox: Inbox
       profile: Profile
-      manage_listings: "Manage listings"
+      manage_listings: "Manage posts"
       settings: Settings
       logout: "Log out"
       login: "Log in"
