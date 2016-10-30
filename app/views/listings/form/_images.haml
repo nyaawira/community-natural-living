@@ -28,3 +28,6 @@
       .fileupload-preview-remove-image
         = icon_tag("cross", ["icon-fix"])
       %input.listing-image-id{type: "hidden", name: "listing_images[][id]"}
+
+#listing_video_ids
+  %input{name: "listing_video_urls", type: "hidden", id: 'video_urls'}

@@ -257,10 +257,6 @@ class ListingsController < ApplicationController
     form_content
   end
 
-  def add_video
-    binding.pry
-  end
-
   def create
     params[:listing].delete("origin_loc_attributes") if params[:listing][:origin_loc_attributes][:address].blank?
 
