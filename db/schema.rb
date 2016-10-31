@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160816123633) do
+ActiveRecord::Schema.define(version: 20161031092728) do
 
   create_table "auth_tokens", force: :cascade do |t|
     t.string   "token",            limit: 255
@@ -530,6 +530,15 @@ ActiveRecord::Schema.define(version: 20160816123633) do
   end
 
   add_index "listing_units", ["listing_shape_id"], name: "index_listing_units_on_listing_shape_id", using: :btree
+
+  create_table "listing_videos", force: :cascade do |t|
+    t.string   "url",        limit: 255
+    t.integer  "listing_id", limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "listing_videos", ["listing_id"], name: "index_listing_videos_on_listing_id", using: :btree
 
   create_table "listings", force: :cascade do |t|
     t.integer  "community_id",                    limit: 4,                         null: false
@@ -1054,4 +1063,5 @@ ActiveRecord::Schema.define(version: 20160816123633) do
   add_index "transactions", ["last_transition_at"], name: "index_transactions_on_last_transition_at", using: :btree
   add_index "transactions", ["listing_id"], name: "index_transactions_on_listing_id", using: :btree
 
+  add_foreign_key "listing_videos", "listings"
 end

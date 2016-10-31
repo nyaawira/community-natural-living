@@ -6,70 +6,24 @@
       = t("listings.form.images.video_uploading_in_progress")
 
 = s3_uploader_form id: "s3-uploader" do
-  .listing-images#videos-container
-    #video_upload1.fileinput-button.upload-image-placeholder
-      .fileupload-text-container{:style => ""}
-        .fileupload-centered-text
-          .fileupload-text Select video
-          .fileupload-small-text
-          .fileupload-error-text
-      .fileupload-preview-image{:style => "display: none;"}
-      .fileupload-preview-remove-image
-        %i.icon-remove.icon-fix
-      = file_field_tag :file, accept: "video/mp4,video/x-m4v,video/*"
-    #video_upload2.fileinput-button.upload-image-placeholder
-      .fileupload-text-container{:style => ""}
-        .fileupload-centered-text
-          .fileupload-text Select video
-          .fileupload-small-text
-          .fileupload-error-text
-      .fileupload-preview-image{:style => "display: none;"}
-      .fileupload-preview-remove-image
-        %i.icon-remove.icon-fix
-      = file_field_tag :file, accept: "video/mp4,video/x-m4v,video/*"
-    #video_upload3.fileinput-button.upload-image-placeholder
-      .fileupload-text-container{:style => ""}
-        .fileupload-centered-text
-          .fileupload-text Select video
-          .fileupload-small-text
-          .fileupload-error-text
-      .fileupload-preview-image{:style => "display: none;"}
-      .fileupload-preview-remove-image
-        %i.icon-remove.icon-fix
-      = file_field_tag :file, accept: "video/mp4,video/x-m4v,video/*"
+  = file_field_tag :file, accept: "video/mp4,video/x-m4v,video/*"
 
 - content_for :videos_js do
   :javascript
     $(function() {
-      urls = [];
       $("#submit_listing_btn").click(function(){
         $('.listing_form').submit();
-      })
+      });
       $("#s3-uploader").S3Uploader();
       $('#s3-uploader').bind("s3_uploads_start", function(e, content) {
         $('#video_flash').show();
+        $('#submit_listing_btn').attr('disabled', true)
       });
       $('#s3-uploader').bind("s3_upload_complete", function(e, content) {
-        urls.push(content.url);
+        url = content.url
+        $('#video_url').val(url);
+        $('#submit_listing_btn').attr('disabled', false);
         $('#video_flash').hide();
-        file_input1 = $("#video_upload1").find("input[type='file']");
-        file_input2 = $("#video_upload2").find("input[type='file']");
-        file_input3 = $("#video_upload3").find("input[type='file']");
-        fileupload_text1 = $("#video_upload1").find('.fileupload-text');
-        fileupload_text2 = $("#video_upload2").find('.fileupload-text');
-        fileupload_text3 = $("#video_upload3").find('.fileupload-text');
-        if(file_input1.length > 0){
-          file_input1.remove();
-          fileupload_text1.text('Video uploaded');
-        }else if(file_input2.length > 0){
-          file_input2.remove();
-          fileupload_text2.text('Video uploaded');
-        }else if(file_input3.length > 0){
-          file_input3.remove();
-          fileupload_text3.text('Video uploaded');
-        }
-        console.log(urls)
-        $('#video_urls').val(JSON.stringify(urls));
       });
     });
 

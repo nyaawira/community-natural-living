@@ -287,8 +287,12 @@ class ListingsController < ApplicationController
 
     ActiveRecord::Base.transaction do
       @listing.author = @current_user
-
       if @listing.save
+        if params[:listing_video_url].present?
+          video = @listing.build_listing_video
+          video.url = params[:listing_video_url]
+          video.save
+        end
         upsert_field_values!(@listing, params[:custom_fields])
 
         listing_image_ids =
@@ -410,6 +414,11 @@ class ListingsController < ApplicationController
     upsert_field_values!(@listing, params[:custom_fields])
 
     if update_successful
+      if params[:listing_video_url].present?
+        video = @listinglisting_video.present? ? @listing.build_listing_video : @listing.listing_video
+        video.url = params[:listing_video_url]
+        video.save
+      end
       @listing.location.update_attributes(params[:location]) if @listing.location
       flash[:notice] = t("layouts.notifications.listing_updated_successfully")
       Delayed::Job.enqueue(ListingUpdatedJob.new(@listing.id, @current_community.id))

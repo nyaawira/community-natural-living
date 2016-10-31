@@ -70,7 +70,11 @@
                         = t("listings.show.processing_uploaded_image")
                       - else
                         = t(".no_description")
-
+      - if @listing.video_url.present?
+        .col-12
+          %video{:height => "375", :width => "600"}
+            %source{:src => @listing.video_url, :type => "video/mp4"}
+              %p Your browser does not support H.264/MP4.
     .row
       .col-12
         - if @listing.description && !@listing.description.blank?

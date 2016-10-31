@@ -68,17 +68,18 @@ class Listing < ActiveRecord::Base
 
   belongs_to :author, :class_name => "Person", :foreign_key => "author_id"
 
-  has_many :listing_images, -> { where("error IS NULL") }, :dependent => :destroy
+  has_many :listing_images, -> { where("error IS NULL") }, dependent: :destroy
+  has_one  :listing_video, dependent: :destroy
 
   has_many :conversations
-  has_many :comments, :dependent => :destroy
-  has_many :custom_field_values, :dependent => :destroy
+  has_many :comments, dependent: :destroy
+  has_many :custom_field_values, dependent: :destroy
   has_many :custom_dropdown_field_values, :class_name => "DropdownFieldValue"
   has_many :custom_checkbox_field_values, :class_name => "CheckboxFieldValue"
 
-  has_one :location, :dependent => :destroy
-  has_one :origin_loc, -> { where('location_type = ?', 'origin_loc') }, :class_name => "Location", :dependent => :destroy
-  has_one :destination_loc, -> { where('location_type = ?', 'destination_loc') }, :class_name => "Location", :dependent => :destroy
+  has_one :location, dependent: :destroy
+  has_one :origin_loc, -> { where('location_type = ?', 'origin_loc') }, :class_name => "Location", dependent: :destroy
+  has_one :destination_loc, -> { where('location_type = ?', 'destination_loc') }, :class_name => "Location", dependent: :destroy
   accepts_nested_attributes_for :origin_loc, :destination_loc
 
   has_and_belongs_to_many :followers, :class_name => "Person", :join_table => "listing_followers"
@@ -126,6 +127,10 @@ class Listing < ActiveRecord::Base
     when "closed"
       where(["open = '0' OR (valid_until IS NOT NULL AND valid_until < ?)", DateTime.now])
     end
+  end
+
+  def video_url
+    listing_video.present? ? listing_video.url : nil
   end
 
   def visible_to?(current_user, current_community)

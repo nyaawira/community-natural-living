@@ -88,4 +88,13 @@
 //= require listing_form
 //= require radio_buttons
 //= require s3_direct_upload
+//= require mediaelement-and-player.min
 //= require_self
+
+$(document).ready(function() {
+  $('video').mediaelementplayer({
+    alwaysShowControls: false,
+    videoVolume: 'horizontal',
+    features: ['playpause','progress','volume','fullscreen']
+  });
+});
