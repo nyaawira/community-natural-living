@@ -1484,6 +1484,7 @@ en:
         loading_image: Loading...
         image_uploading_in_progress: "Image upload in progress..."
         video_uploading_in_progress: "Video upload in progress..."
+        video_uploaded_successfully: "Video has been uploaded successfully!"
         processing_takes_a_while: "All images uploaded! Processing them will take a bit of time, but it's ok to save the post and move on."
         this_may_take_a_while: "this only takes a second"
         percentage_loaded: "%{percentage}%"
