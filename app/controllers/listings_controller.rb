@@ -415,7 +415,7 @@ class ListingsController < ApplicationController
 
     if update_successful
       if params[:listing_video_url].present?
-        video = @listinglisting_video.present? ? @listing.build_listing_video : @listing.listing_video
+        video = @listing.listing_video.blank? ? @listing.build_listing_video : @listing.listing_video
         video.url = params[:listing_video_url]
         video.save
       end

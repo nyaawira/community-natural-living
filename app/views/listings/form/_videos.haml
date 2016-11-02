@@ -4,8 +4,7 @@
     .flash-icon{:class => icon_class("loading")}
     .flash-text
       = t("listings.form.images.video_uploading_in_progress")
-
-.flash-notifications.js-listing-image-loading-done.hidden#video_complete_flash
+.flash-notifications#video_complete_flash{style: @listing.listing_video.present? && @listing.listing_video.url.present? ? 'display:block' : 'display:none'}
   .flash-notification{:class => "flash-notice"}
     .flash-icon{:class => icon_class("check")}
     .flash-text
@@ -24,10 +23,12 @@
       });
       $("#s3-uploader").S3Uploader();
       $('#s3-uploader').bind("s3_uploads_start", function(e, content) {
+        $('#video_complete_flash').hide();
         $('#video_flash').show();
         $('#submit_listing_btn').attr('disabled', true)
       });
       $('#s3-uploader').bind("s3_upload_complete", function(e, content) {
+        console.log('finish');
         url = content.url
         $('#video_url').val(url);
         $('#submit_listing_btn').attr('disabled', false);
