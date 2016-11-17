@@ -4,14 +4,34 @@
     .flash-icon{:class => icon_class("loading")}
     .flash-text
       = t("listings.form.images.video_uploading_in_progress")
-.flash-notifications#video_complete_flash{style: @listing.listing_video.present? && @listing.listing_video.url.present? ? 'display:block' : 'display:none'}
+.flash-notifications#video_complete_flash{style: 'display:none'}
   .flash-notification{:class => "flash-notice"}
     .flash-icon{:class => icon_class("check")}
     .flash-text
       = t("listings.form.images.video_uploaded_successfully")
 
 = s3_uploader_form id: "s3-uploader" do
-  = file_field_tag :file, accept: "video/mp4,video/x-m4v,video/*"
+  #video_upload.fileinput-button.upload-image-placeholder
+    - if @listing.listing_video.present?
+      %video{:height => "135", :width => "135"}
+        %source{:src => @listing.listing_video.url, :type => "video/mp4"}
+      .fileupload-text-container{:style => "display:none;"}
+        .fileupload-centered-text
+          .fileupload-text Select video
+          .fileupload-small-text
+          .fileupload-error-text
+      .fileupload-preview-remove-image{style: 'display:block; z-index:999'}
+        %i.icon-remove.icon-fix
+    - else
+      .fileupload-text-container{:style => ""}
+        .fileupload-centered-text
+          .fileupload-text Select video
+          .fileupload-small-text
+          .fileupload-error-text
+      .fileupload-preview-image{:style => "display: none;"}
+      .fileupload-preview-remove-image
+        %i.icon-remove.icon-fix
+    = file_field_tag :file, accept: "video/mp4,video/x-m4v,video/*", style: 'z-index: 9;'
 
 - content_for :videos_js do
   :javascript
@@ -34,6 +54,13 @@
         $('#submit_listing_btn').attr('disabled', false);
         $('#video_flash').hide();
         $("#video_complete_flash").show();
+        $('#video_upload .fileupload-text').text('Uploaded successfully!');
+      });
+      $(".fileupload-preview-remove-image").click(function(e){
+        e.preventDefault();
+        $(".mejs-container.mejs-video").hide();
+        $('.fileupload-text-container').show();
+        $(this).hide();
       });
     });
 
@@ -42,4 +69,8 @@
 - else
   - content_for :extra_javascript do
     = yield :videos_js
-  
+
+:css
+  .mejs-container.mejs-video{
+    z-index: 99;
+  }
