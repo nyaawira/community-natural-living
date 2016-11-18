@@ -1,3 +1,6 @@
+#video_preview_link{style: 'display:none'}
+  = link_to 'Click here to see the preview', '#', target: '_blank'
+
 = label_tag 'Video'
 .flash-notifications.js-listing-image-loading.hidden#video_flash
   .flash-notification{:class => "flash-notice"}
@@ -55,6 +58,8 @@
         $('#video_flash').hide();
         $("#video_complete_flash").show();
         $('#video_upload .fileupload-text').text('Uploaded successfully!');
+        $('#video_preview_link').show();
+        $('#video_preview_link a').attr('href', url);
       });
       $(".fileupload-preview-remove-image").click(function(e){
         e.preventDefault();
