@@ -149,7 +149,7 @@ class PeopleController < Devise::RegistrationsController
     # (unless disabled for testing environment)
     if APP_CONFIG.skip_email_confirmation
       email.confirm!
-      Delayed::Job.enqueue(SendWelcomeEmail.new(person.id, @current_community.id), priority: 5)
+      Delayed::Job.enqueue(SendWelcomeEmail.new(@person.id, @current_community.id), priority: 5)
 
       redirect_to search_path
     else
