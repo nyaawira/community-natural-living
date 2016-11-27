@@ -502,6 +502,7 @@ window.ST = window.ST || {};
       } else {
         $(".js-listing-image-loading-done").hide();
         $(".js-listing-image-loading").show();
+        $('#video_flash').hide();
       }
     });
 

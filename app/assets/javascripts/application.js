@@ -31,6 +31,7 @@
 //= require jquery.ui.widget
 //= require load-image.min.js
 //= require canvas-to-blob.min.js
+//= require s3_direct_upload
 //= require jquery.fileupload
 //= require jquery.fileupload-process
 //= require jquery.fileupload-validate
@@ -87,7 +88,6 @@
 //= require transaction
 //= require listing_form
 //= require radio_buttons
-//= require s3_direct_upload
 //= require mediaelement-and-player.min
 //= require_self
 
