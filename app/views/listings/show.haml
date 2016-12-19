@@ -112,6 +112,16 @@
               - content_for :extra_javascript do
                 :javascript
                   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+            .listing-fb-like-button.heart_icon#heart_icon{style: 'margin-top: -2px;'}
+              - if @current_user
+                = render partial: 'like_unlike', locals: {listing: @listing}
+              - else
+                = link_to (image_tag 'heart.png', width: '35'), like_unlike_listing_path(@listing)
+            .listing-fb-like-button#tried{style: 'margin-top: -7px;'}
+              - if @current_user
+                = render partial: 'tried', locals: {listing: @listing}
+              - else
+
 
     - unless (@listing.closed? && !current_user?(@listing.author)) || !@current_community.listing_comments_in_use
       .view-item
@@ -179,3 +189,8 @@
           #googlemap
             = render :partial => "googlemap", :locals => { :listing => @listing}
             = render :partial => "origin", :locals => { :origin_loc => @listing.origin_loc }
+
+= content_for :extra_javascript do
+  :javascript
+    $('.heart_icon').mouseover(function(){
+    });

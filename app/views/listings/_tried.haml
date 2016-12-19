@@ -1,0 +1,8 @@
+- if listing.followed_by?(@current_user)
+  = link_to tried_listing_path(listing), remote: true, method: :patch, class: 'button', style: 'border-radius: 3px;font-size: 13px;padding-top: 0.1em;padding-bottom: 0.1em;padding-right: 0.7em; padding-left: 0.7em;background: #2ab865;' do
+    %i.icon-check.icon-part
+    Tried It
+- else
+  = link_to tried_listing_path(listing), remote: true, method: :patch, class: 'button', style: 'border-radius: 3px;font-size: 13px;padding-top: 0.1em;padding-bottom: 0.1em;padding-right: 0.7em; padding-left: 0.7em;' do
+    %i.icon-check.icon-part
+    Tried It

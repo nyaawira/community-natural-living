@@ -63,6 +63,8 @@ require "open-uri"
 # This class represents a person (a user of Sharetribe).
 
 class Person < ActiveRecord::Base
+  acts_as_liker
+  acts_as_follower
 
   include ErrorsHelper
   include ApplicationHelper

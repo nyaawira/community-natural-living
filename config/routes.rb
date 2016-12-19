@@ -294,6 +294,8 @@ Kassi::Application.routes.draw do
       member do
         post :follow
         delete :unfollow
+        match :like_unlike, via: [:get, :patch]
+        match :tried, via: [:get, :patch]
       end
       collection do
         get :new_form_content
