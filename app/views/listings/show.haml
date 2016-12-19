@@ -192,8 +192,3 @@
           #googlemap
             = render :partial => "googlemap", :locals => { :listing => @listing}
             = render :partial => "origin", :locals => { :origin_loc => @listing.origin_loc }
-
-= content_for :extra_javascript do
-  :javascript
-    $('.heart_icon').mouseover(function(){
-    });
