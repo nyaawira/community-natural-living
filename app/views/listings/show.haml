@@ -70,6 +70,7 @@
                         = t("listings.show.processing_uploaded_image")
                       - else
                         = t(".no_description")
+    .row
       - if @listing.video_url.present?
         .col-12
           %video{:height => "375", :width => "600"}
