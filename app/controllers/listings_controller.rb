@@ -495,6 +495,7 @@ class ListingsController < ApplicationController
       }
       format.js {
         @current_user.toggle_like!(@listing)
+        Delayed::Job.enqueue(ListingLikeJob.new(@listing.id, @current_community.id, @current_user.id))
         render :layout => false, locals: {listing: @listing}
       }
     end
@@ -511,6 +512,7 @@ class ListingsController < ApplicationController
           @current_user.unfollow!(@listing)
         else
           @current_user.follow!(@listing)
+          Delayed::Job.enqueue(ListingTriedJob.new(@listing.id, @current_community.id, @current_user.id))
         end
         render :layout => false, locals: {listing: @listing}
       }
