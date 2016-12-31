@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161031092728) do
+ActiveRecord::Schema.define(version: 20161219074518) do
 
   create_table "auth_tokens", force: :cascade do |t|
     t.string   "token",            limit: 255
@@ -438,6 +438,17 @@ ActiveRecord::Schema.define(version: 20161031092728) do
   add_index "follower_relationships", ["person_id", "follower_id"], name: "index_follower_relationships_on_person_id_and_follower_id", unique: true, using: :btree
   add_index "follower_relationships", ["person_id"], name: "index_follower_relationships_on_person_id", using: :btree
 
+  create_table "follows", force: :cascade do |t|
+    t.string   "follower_type",   limit: 255
+    t.string   "follower_id",     limit: 255
+    t.string   "followable_type", limit: 255
+    t.integer  "followable_id",   limit: 4
+    t.datetime "created_at"
+  end
+
+  add_index "follows", ["followable_id", "followable_type"], name: "fk_followables", using: :btree
+  add_index "follows", ["follower_id", "follower_type"], name: "fk_follows", using: :btree
+
   create_table "invitations", force: :cascade do |t|
     t.string   "code",         limit: 255
     t.integer  "community_id", limit: 4
@@ -473,6 +484,17 @@ ActiveRecord::Schema.define(version: 20161031092728) do
   end
 
   add_index "landing_pages", ["community_id"], name: "index_landing_pages_on_community_id", unique: true, using: :btree
+
+  create_table "likes", force: :cascade do |t|
+    t.string   "liker_type",    limit: 255
+    t.string   "liker_id",      limit: 255
+    t.string   "likeable_type", limit: 255
+    t.integer  "likeable_id",   limit: 4
+    t.datetime "created_at"
+  end
+
+  add_index "likes", ["likeable_id", "likeable_type"], name: "fk_likeables", using: :btree
+  add_index "likes", ["liker_id", "liker_type"], name: "fk_likes", using: :btree
 
   create_table "listing_followers", id: false, force: :cascade do |t|
     t.string  "person_id",  limit: 255
@@ -670,6 +692,17 @@ ActiveRecord::Schema.define(version: 20161031092728) do
 
   add_index "marketplace_trials", ["community_id"], name: "index_marketplace_trials_on_community_id", using: :btree
   add_index "marketplace_trials", ["created_at"], name: "index_marketplace_trials_on_created_at", using: :btree
+
+  create_table "mentions", force: :cascade do |t|
+    t.string   "mentioner_type",   limit: 255
+    t.string   "mentioner_id",     limit: 255
+    t.string   "mentionable_type", limit: 255
+    t.integer  "mentionable_id",   limit: 4
+    t.datetime "created_at"
+  end
+
+  add_index "mentions", ["mentionable_id", "mentionable_type"], name: "fk_mentionables", using: :btree
+  add_index "mentions", ["mentioner_id", "mentioner_type"], name: "fk_mentions", using: :btree
 
   create_table "menu_link_translations", force: :cascade do |t|
     t.integer  "menu_link_id", limit: 4

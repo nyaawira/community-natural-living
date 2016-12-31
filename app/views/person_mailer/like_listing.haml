@@ -1,0 +1,8 @@
+- url = listing_url(@url_params.merge({:id => @listing.id}))
+
+%tr
+  %td{:align => "left"}
+    %font{body_font}
+      Your listing with title #{@listing.title} is liked by #{@liker.full_name}
+
+= render :partial => "action_button", :locals => { :text => "View listing", :url => url}

@@ -61,6 +61,8 @@
 #
 
 class Listing < ActiveRecord::Base
+  acts_as_likeable
+  acts_as_followable
 
   include ApplicationHelper
   include ActionView::Helpers::TranslationHelper

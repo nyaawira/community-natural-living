@@ -3,9 +3,9 @@ class ListingsController < ApplicationController
   class ListingDeleted < StandardError; end
 
   # Skip auth token check as current jQuery doesn't provide it automatically
-  skip_before_filter :verify_authenticity_token, :only => [:close, :update, :follow, :unfollow]
+  skip_before_filter :verify_authenticity_token, :only => [:close, :update, :follow, :unfollow, :like_unlike, :tried]
 
-  before_filter :only => [ :edit, :edit_form_content, :update, :close, :follow, :unfollow ] do |controller|
+  before_filter :only => [ :edit, :edit_form_content, :update, :close, :follow, :unfollow, :like_unlike, :tried ] do |controller|
     controller.ensure_logged_in t("layouts.notifications.you_must_log_in_to_view_this_content")
   end
 
@@ -485,6 +485,38 @@ class ListingsController < ApplicationController
 
   def unfollow
     change_follow_status("unfollow")
+  end
+
+  def like_unlike
+    @listing = Listing.find(params[:id])
+    respond_to do |format|
+      format.html {
+        redirect_to @listing
+      }
+      format.js {
+        @current_user.toggle_like!(@listing)
+        Delayed::Job.enqueue(ListingLikeJob.new(@listing.id, @current_community.id, @current_user.id))
+        render :layout => false, locals: {listing: @listing}
+      }
+    end
+  end
+
+  def tried
+    @listing = Listing.find(params[:id])
+    respond_to do |format|
+      format.html {
+        redirect_to @listing
+      }
+      format.js {
+        if @listing.followed_by?(@current_user)
+          @current_user.unfollow!(@listing)
+        else
+          @current_user.follow!(@listing)
+          Delayed::Job.enqueue(ListingTriedJob.new(@listing.id, @current_community.id, @current_user.id))
+        end
+        render :layout => false, locals: {listing: @listing}
+      }
+    end
   end
 
   def verification_required

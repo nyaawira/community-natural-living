@@ -106,13 +106,25 @@
       .row
         .col-12
           .listing-social
-            .listing-fb-like-button
-              = facebook_like(current_user?(@listing.author))
-            .listing-tweet-button
-              = link_to("", "https://twitter.com/share", :class => "twitter-share-button", "data" => {count: "horizontal", via: (@current_community.twitter_handle || "Sharetribe"), text: @listing.title })
-              - content_for :extra_javascript do
-                :javascript
-                  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+            / .listing-fb-like-button
+            /   = facebook_like(current_user?(@listing.author))
+            / .listing-tweet-button
+            /   = link_to("", "https://twitter.com/share", :class => "twitter-share-button", "data" => {count: "horizontal", via: (@current_community.twitter_handle || "Sharetribe"), text: @listing.title })
+            /   - content_for :extra_javascript do
+            /     :javascript
+            /       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+            .listing-fb-like-button.heart_icon#heart_icon{style: 'margin-top: -2px;'}
+              - if @current_user
+                = render partial: 'like_unlike', locals: {listing: @listing}
+              - else
+                = link_to (image_tag 'heart.png', width: '35'), like_unlike_listing_path(@listing)
+            .listing-fb-like-button#tried{style: 'margin-top: -7px;'}
+              - if @current_user
+                = render partial: 'tried', locals: {listing: @listing}
+              - else
+                = link_to tried_listing_path(@listing), class: 'button', style: 'border-radius: 3px;font-size: 13px;padding-top: 0.1em;padding-bottom: 0.1em;padding-right: 0.7em; padding-left: 0.7em;' do
+                  %i.icon-check.icon-part
+                  Tried It
 
     - unless (@listing.closed? && !current_user?(@listing.author)) || !@current_community.listing_comments_in_use
       .view-item

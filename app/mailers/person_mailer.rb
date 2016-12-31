@@ -418,6 +418,28 @@ class PersonMailer < ActionMailer::Base
     end
   end
 
+  def like_listing(community, listing, recipient, liker)
+    set_up_layout_variables(recipient, community)
+    @listing = listing
+    @liker   = liker
+    with_locale(recipient.locale, community.locales.map(&:to_sym), community.id) do
+      premailer_mail(:to => recipient.confirmed_notification_emails_to,
+                     :from => community_specific_sender(community),
+                     :subject => "Someone has liked your listing")
+    end
+  end
+
+  def tried_listing(community, listing, recipient, liker)
+    set_up_layout_variables(recipient, community)
+    @listing = listing
+    @liker   = liker
+    with_locale(recipient.locale, community.locales.map(&:to_sym), community.id) do
+      premailer_mail(:to => recipient.confirmed_notification_emails_to,
+                     :from => community_specific_sender(community),
+                     :subject => "Someone has tried your listing")
+    end
+  end
+
   private
 
   def feedback_author_name_and_email(author, email, community)
