@@ -3,6 +3,7 @@
 %tr
   %td{:align => "left"}
     %font{body_font}
-      Your listing with title #{@listing.title} is liked by #{@liker.full_name}
+      Your listing with title #{@listing.title} is liked by 
+      = link_to @liker.full_name, person_url(@url_params.merge({:username => @liker.username}))
 
 = render :partial => "action_button", :locals => { :text => "View listing", :url => url}
