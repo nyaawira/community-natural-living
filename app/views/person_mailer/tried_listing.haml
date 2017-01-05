@@ -3,7 +3,7 @@
 %tr
   %td{:align => "left"}
     %font{body_font}
-      Your listing with title #{@listing.title} is tried by 
       = link_to @liker.full_name, person_url(@url_params.merge({:username => @liker.username}))
+      tried your post.
 
 = render :partial => "action_button", :locals => { :text => "View listing", :url => url}
