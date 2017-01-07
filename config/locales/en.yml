@@ -438,12 +438,12 @@ en:
         one: "There is %{count} open post with this order type. If you change any of the settings below, that post will retain the old settings. The post can be changed to the new settings by editing it manually. If you don't want to have the post with the old settings visible on your site, you can close it by clicking the button below."
         other: "There are %{count} open posts with this order type. If you change any of the settings below, those posts will retain the old settings. Those posts can be changed to the new settings by editing them manually. If you don't want to have any posts with the old settings visible on your site, you can close them by clicking the button below."
       close_listings_action:
-        one: "Close %{count} post"
-        other: "Close %{count} posts"
+        one: "Hide %{count} post"
+        other: "Hide %{count} posts"
       confirm_close_listings_action:
-        one: "Are you sure you want to close %{count} post?"
-        other: "Are you sure you want to close %{count} posts?"
-      successfully_closed: "Successfully closed posts"
+        one: "Are you sure you want to hide %{count} post?"
+        other: "Are you sure you want to hide %{count} posts?"
+      successfully_closed: "Successfully hidden posts"
       successfully_deleted: "Successfully deleted order type '%{order_type}'"
       pricing_and_checkout_title: "Pricing & checkout"
       online_payments_label: "Allow sellers to accept payments online"
@@ -572,8 +572,8 @@ en:
       accept_request: "Accept the request"
       reject_offer: "Not this time"
       reject_request: "Not this time"
-      close_listing: "Close the post %{listing_title_link}"
-      update_later: "Leave the post open"
+      close_listing: "Hide the post %{listing_title_link}"
+      update_later: "Leave the post visible"
       optional_message: "Optional message"
       price_to_pay: "Total price to be paid"
       you_need_to_fill_payout_details_before_accepting: "You need to fill in payout details before you can accept the request and receive the payment. Go to %{payment_settings_link} to fill in the details."
@@ -844,7 +844,7 @@ en:
       subject: "Payment canceled"
       has_marked_request_as_canceled: "%{other_party_full_name} has marked the request about '%{request}' canceled. You will not receive money from this transaction."
       if_this_was_error: "If you think this was an error, %{please_contant_admin_link}."
-      please_contant_admin_link: "please contact the administrator"
+      please_contant_admin_link: "please contact the support team"
     confirmation_instructions:
       confirmation_instructions_signature: "Best regards,<br/>The %{service_name} Team"
       need_to_confirm: "Confirm your email address by clicking the button below."
@@ -931,9 +931,9 @@ en:
       title_link_text: "%{community_name}"
       intro_paragraph: "Here are some of the things that happened on %{community_link} during the past %{time_since_last_update}."
       intro_paragraph_link_text: "%{community_name}"
-      post_a_new_listing: "Add a new post!"
-      reduce_email_footer_text: "Too much email? %{settings_link} or %{unsubscribe_link}."
-      settings_link_text: "Edit your email settings here"
+      post_a_new_listing: "Share a piece of your natural and healthy lifestyle!"
+      reduce_email_footer_text: ""
+      settings_link_text: ""
       unsubscribe_link_text: unsubscribe
     newsletter:
       hi: "Hi %{name},"
@@ -1135,13 +1135,13 @@ en:
       no_listings_with_your_search_criteria: "Sorry, no posts could be found for your search criteria. Maybe try other search terms?"
       no_listings_notification: "No posts. %{add_listing_link}."
       add_listing_link_text: "Add new post"
-      open_listing: "open post"
-      open_listings: "open posts"
+      open_listing: "Post"
+      open_listings: "Posts"
       private_listing_notification_log_in: "log in"
       is: is
       are: are
-      what_do_you_need: "What are you looking for?"
-      post_new_listing: "Add a new post"
+      what_do_you_need: "Search here"
+      post_new_listing: "Add a new Post"
       are_offering: offer
       add_news_item: "Add an article"
       lend_rent_help_carpool: "Sell, lend, help, share rides"
@@ -1329,7 +1329,7 @@ en:
       offer_canceled: "Offer canceled"
       listing_updated_successfully: "Post updated successfully"
       only_kassi_administrators_can_access_this_area: "Only %{service_name} administrators can access this area"
-      only_listing_author_can_close_a_listing: "Only post author can close a post"
+      only_listing_author_can_close_a_listing: "Only post author can hide a post"
       only_listing_author_can_edit_a_listing: "Only post author can edit a post"
       payment_successful: "Payment successful"
       payment_canceled: "Payment cancelled"
@@ -1363,7 +1363,7 @@ en:
       you_are_not_allowed_to_give_feedback_on_this_transaction: "You are not authorized to give feedback on this event"
       you_are_not_authorized_to_do_this: "You are not authorized to do this"
       you_are_not_authorized_to_view_this_content: "You are not authorized to view this content"
-      listing_closed: "This post has been closed"
+      listing_closed: "This post has been hidden"
       send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
       you_cannot_reply_to_a_closed_offer: "You cannot reply to a closed offer"
       you_cannot_send_message_to_yourself: "You cannot send a message to yourself"
@@ -1424,15 +1424,15 @@ en:
       send_comment: "Comment"
       to_send_a_comment: "to send a new comment."
       write_comment: "Write a new comment:"
-      you_cannot_send_a_new_comment_because_listing_is_closed: "You cannot send new comments because this post is closed."
+      you_cannot_send_a_new_comment_because_listing_is_closed: "You cannot send new comments because this post is hidden."
       you_must: "You must"
       subscribe_to_comments: "Notify me of new comments and updates"
     edit:
       edit_listing: "Edit post"
     edit_links:
-      close_listing: "Close post"
+      close_listing: "Hide post"
       edit_listing: "Edit post"
-      reopen_listing: "Reopen post"
+      reopen_listing: "Make post visible to community."
       move_to_top: "Move to top of homepage"
       show_in_updates_email: "Show in the next newsletter"
       show_in_updates_email_loading: Loading...
@@ -1443,8 +1443,8 @@ en:
     error:
       something_went_wrong: "Something went wrong, error code: %{error_code}"
     follow_links:
-      follow: "Get notified about new comments"
-      unfollow: "Don't get notified about new comments"
+      follow: "Follow Post (Get notified about new comments)"
+      unfollow: "Unfollow Post (Don't get notified about new comments)"
     form:
       custom_field_partials:
         dropdown:
@@ -1455,8 +1455,8 @@ en:
       departure_time_radio_buttons:
         repeated: "Repeated (add times and days in the field 'detailed description')"
       description:
-        detailed_description: "Detailed description"
-        youtube_info: "If your description contains YouTube links, the videos will be shown below the description."
+        detailed_description: "Caption"
+        youtube_info: "If your caption/description contains YouTube links, the videos will be shown below the caption."
       destination:
         destination: Destination
       form_content:
@@ -1473,7 +1473,7 @@ en:
         googlemap_description: Mapview
         googlemap_updatemap: "Update Map"
       images:
-        image: Image
+        image: Add an image
         best_result: "For best results, use JPG, GIF or PNG images that are %{width} by %{height} pixels"
         no_file_selected: "No file selected"
         remove_image: "Remove image"
@@ -1517,7 +1517,7 @@ en:
         location: Location
         origin: Origin
       send_button:
-        save_listing: "Save post"
+        save_listing: "Post"
       share_type:
         select: Select
         borrow: Borrowing
@@ -1594,7 +1594,7 @@ en:
       how_paypal_works: "How PayPal Works"
       payment_help: "Payment help"
     new:
-      post_a_new_listing: "Add a new post"
+      post_a_new_listing: "Add a new Post"
       listing: listing
       selected_category: "Category: %{category}"
       selected_subcategory: "Subcategory: %{subcategory}"
@@ -1617,7 +1617,7 @@ en:
     quantity_placeholder: Quantity
     please_comment: Comment
     reply_link:
-      listing_closed: "Post is closed"
+      listing_closed: "Post is hidden"
     show:
       add_your_phone_number: "Add your phone number"
       add_profile_picture: "Add profile picture"
@@ -1839,8 +1839,8 @@ en:
       grade: "grade:"
       and_gave_following_feedback: "and gave the following feedback"
     profile_listings:
-      show_also_closed: "Show also closed"
-      show_only_open: "Show only open"
+      show_also_closed: "Show my hidden posts."
+      show_only_open: "Show visible posts only."
       no_image: "No image"
     show:
       contact: "Message %{person}"
@@ -1866,21 +1866,21 @@ en:
       reviews: "received reviews"
       listing: listing
       listings: listings
-      open_listing: "open post"
-      open_listings: "open posts"
+      open_listing: "Post"
+      open_listings: "Posts"
       no_listings: "No posts"
-      no_open_listings: "No open posts"
+      no_open_listings: "No posts visible to the community"
       no_reviews: "No reviews"
       show_all_listings: "Show all posts"
-      show_all_open_listings: "Show all open posts"
+      show_all_open_listings: "Show all visible posts"
       show_all_reviews: "Show all reviews"
     followed_people:
       you_follow_plural: "You follow %{count} people"
       you_follow_singular: "You follow %{count} person"
-      they_follow_plural: "%{count} followed people"
-      they_follow_singular: "%{count} followed person"
-      show_all_followed_people: "Show all followed people"
-      no_followed_people: "No followed people"
+      they_follow_plural: "Following %{count} people"
+      they_follow_singular: "Following %{count} person"
+      show_all_followed_people: "See everyone I follow"
+      no_followed_people: ""
     follow_button:
       following: Following
       follow: Follow
@@ -1958,9 +1958,9 @@ en:
         status_confirmed: Confirmed
         status_pending: Pending
     notifications:
-      email_from_admins: "I'm willing to receive occasional emails from the administrators"
+      email_from_admins: "I'm willing to receive occasional emails from team Natrella"
       i_want_to_get_email_notification_when: "I want to get an email notification when..."
-      newsletters: "Emails from administrators"
+      newsletters: "Emails from Natrella"
       community_updates: Newsletters
       email_about_accept_reminders: "...I have forgotten to accept an offer or a request"
       email_about_confirm_reminders: "...I have forgotten to confirm an order as completed"
