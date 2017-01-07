@@ -118,8 +118,9 @@
                 = render partial: 'like_unlike', locals: {listing: @listing, likes_count: @likes_count}
               - else
                 = link_to (image_tag 'heart.png', width: '35'), like_unlike_listing_path(@listing)
-                #like_count{style: 'float: right; margin-top: 4px; margin-left: 5px;'}
-                  = pluralize(@likes_count, 'Like')
+                - if @likes_count > 0
+                  #like_count{style: 'float: right; margin-top: 4px; margin-left: 5px;'}
+                    = pluralize(@likes_count, 'Like')
               
             .listing-fb-like-button#tried{style: 'margin-top: -5px;'}
               - if @current_user
@@ -128,6 +129,9 @@
                 = link_to tried_listing_path(@listing), class: 'button', style: 'border-radius: 3px;font-size: 13px;padding-top: 0.1em;padding-bottom: 0.1em;padding-right: 0.7em; padding-left: 0.7em;' do
                   %i.icon-check.icon-part
                   Tried It
+                - if @tried_count > 0
+                  #tried_count{style: 'float: right; position: relative; left: 45px; top: -33px;'}
+                    = pluralize(@tried_count, 'Try')
 
     - unless (@listing.closed? && !current_user?(@listing.author)) || !@current_community.listing_comments_in_use
       .view-item

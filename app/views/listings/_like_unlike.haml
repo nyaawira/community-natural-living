@@ -2,5 +2,6 @@
   = link_to (image_tag 'heart_active.png', width: '35'), like_unlike_listing_path(listing), remote: true, method: :patch
 - else
   = link_to (image_tag 'heart_blank.png', width: '35'), like_unlike_listing_path(listing), remote: true, method: :patch
-#like_count{style: 'float: right; margin-top: 4px; margin-left: 5px;'}
-  = pluralize(likes_count, 'Like')
+- if likes_count > 0
+  #like_count{style: 'float: right; margin-top: 4px; margin-left: 5px;'}
+    = pluralize(likes_count, 'Like')
