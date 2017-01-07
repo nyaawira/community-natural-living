@@ -6,4 +6,4 @@
       = link_to @liker.full_name, person_url(@url_params.merge({:username => @liker.username}))
       likes your post.
 
-= render :partial => "action_button", :locals => { :text => "View listing", :url => url}
+= render :partial => "action_button", :locals => { :text => "See which post is liked.", :url => url}
