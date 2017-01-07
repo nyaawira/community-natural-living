@@ -425,7 +425,7 @@ class PersonMailer < ActionMailer::Base
     with_locale(recipient.locale, community.locales.map(&:to_sym), community.id) do
       premailer_mail(:to => recipient.confirmed_notification_emails_to,
                      :from => community_specific_sender(community),
-                     :subject => "Someone has liked your listing")
+                     :subject => "Someone has liked your post!")
     end
   end
 
@@ -436,7 +436,7 @@ class PersonMailer < ActionMailer::Base
     with_locale(recipient.locale, community.locales.map(&:to_sym), community.id) do
       premailer_mail(:to => recipient.confirmed_notification_emails_to,
                      :from => community_specific_sender(community),
-                     :subject => "Someone has tried your listing")
+                     :subject => "Someone has tried your post!")
     end
   end
 

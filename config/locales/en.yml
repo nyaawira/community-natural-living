@@ -1159,7 +1159,7 @@ en:
       no_reviews: "No reviews"
       no_image: "No image"
       filter: Filter
-      this_is_private_community: "You need to create an account before you can view the content."
+      this_is_private_community: "You need to join Natrella before you can view the content."
     invitation_form:
       email: "Email address(es)"
       message: "A personal message"
@@ -1209,7 +1209,7 @@ en:
   landing_page:
     hero:
       search: Search
-      signup: "Create an account"
+      signup: "Join Natrella"
       search_placeholder: "What are you looking for?"
     listings:
       no_listing_image: "No picture"
@@ -1236,7 +1236,7 @@ en:
       send_feedback_to_admin: "Send message"
       to_see_what_others_have_suggested: "to see what other users have suggested, and vote for the ideas there."
       your_email_address: "Your email address (to contact you)"
-      connect: "Create an account"
+      connect: "Join Natrella"
       invite_your_friends: "Invite friends!"
       invite_your_neighbors: "Invite neighbors!"
       invite_your_friends_description: "The more people there are in %{service_name}, the more useful it is."
@@ -1280,7 +1280,7 @@ en:
       notifications: Notifications
       requests: "Friend requests"
       settings: Settings
-      sign_up: "Create an account"
+      sign_up: "Join Natrella"
     notifications:
       listing_could_not_be_saved: "Post could not be saved. Please try again. If the problem persists, please %{contact_admin_link}."
       contact_admin_link_text: "contact the admin"
@@ -1621,7 +1621,7 @@ en:
     show:
       add_your_phone_number: "Add your phone number"
       add_profile_picture: "Add profile picture"
-      comments: "Comments"
+      comments: "Add a Comment"
       contact_by_phone: "Contact by phone:"
       contact: Contact
       favor_offer: "Service offer"
@@ -2161,7 +2161,7 @@ en:
       settings: Settings
       logout: "Log out"
       login: "Log in"
-      signup: "Create an account"
+      signup: "Join Natrella"
       admin_dashboard: "Admin dashboard"
       language: Language
   will_paginate:
