@@ -181,6 +181,9 @@ class ListingsController < ApplicationController
       [nil, nil]
     end
 
+    @likes_count = Like.where(likeable_type: 'Listing', likeable_id: @listing.id).size
+    @tried_count = Follow.where(followable_type: 'Listing', followable_id: @listing.id).size
+
     payment_gateway = MarketplaceService::Community::Query.payment_type(@current_community.id)
     process = get_transaction_process(community_id: @current_community.id, transaction_process_id: @listing.transaction_process_id)
     form_path = new_transaction_path(listing_id: @listing.id)
@@ -495,6 +498,7 @@ class ListingsController < ApplicationController
       }
       format.js {
         @current_user.toggle_like!(@listing)
+        @likes_count = Like.where(likeable_type: 'Listing', likeable_id: @listing.id).size
         Delayed::Job.enqueue(ListingLikeJob.new(@listing.id, @current_community.id, @current_user.id))
         render :layout => false, locals: {listing: @listing}
       }
@@ -514,6 +518,7 @@ class ListingsController < ApplicationController
           @current_user.follow!(@listing)
           Delayed::Job.enqueue(ListingTriedJob.new(@listing.id, @current_community.id, @current_user.id))
         end
+        @tried_count = Follow.where(followable_type: 'Listing', followable_id: @listing.id).size
         render :layout => false, locals: {listing: @listing}
       }
     end
