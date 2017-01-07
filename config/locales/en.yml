@@ -620,7 +620,7 @@ en:
       canceled_offer: "Offer canceled."
       message_from: "Message from %{person}"
       about_listing: "About post %{listing_title}"
-      free_message: "Free message"
+      free_message: "Message"
       message_content_not_available: "Message content not available"
     message:
       accepted_request: "accepted the request"
@@ -1089,7 +1089,7 @@ en:
     manage_listings: "Manage posts"
     invite: "Invite new members"
     login: "Log in"
-    signup: "Create an Account"
+    signup: "Join Natrella"
     menu: Menu
   homepage:
     additional_private_listings_slate:
@@ -1421,7 +1421,7 @@ en:
     comment_form:
       ask_a_question: "Comment on the post or ask for more details. All the other users will be able to see your comment."
       log_in: "log in"
-      send_comment: "Send comment"
+      send_comment: "Comment"
       to_send_a_comment: "to send a new comment."
       write_comment: "Write a new comment:"
       you_cannot_send_a_new_comment_because_listing_is_closed: "You cannot send new comments because this post is closed."
@@ -1443,8 +1443,8 @@ en:
     error:
       something_went_wrong: "Something went wrong, error code: %{error_code}"
     follow_links:
-      follow: "Get emails about new comments"
-      unfollow: "Don't get emails about new comments"
+      follow: "Get notified about new comments"
+      unfollow: "Don't get notified about new comments"
     form:
       custom_field_partials:
         dropdown:
@@ -1537,7 +1537,7 @@ en:
         comma_separate: "(comma separate)"
         tags: Tags
       title:
-        listing_title: "post title"
+        listing_title: "Post title"
       valid_until:
         valid_until: "Expiration date"
       valid_until_radio_buttons:
@@ -1621,7 +1621,7 @@ en:
     show:
       add_your_phone_number: "Add your phone number"
       add_profile_picture: "Add profile picture"
-      comments: "Public discussion"
+      comments: "Comments"
       contact_by_phone: "Contact by phone:"
       contact: Contact
       favor_offer: "Service offer"
@@ -1843,7 +1843,7 @@ en:
       show_only_open: "Show only open"
       no_image: "No image"
     show:
-      contact: "Contact %{person}"
+      contact: "Message %{person}"
       about_me: "About me:"
       add_description: "Share something about yourself"
       add_location: "Add location"
