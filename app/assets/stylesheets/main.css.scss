@@ -32,7 +32,7 @@ a, input, button {
 */
 
 body {
-  @include source-sans-pro;
+  font-family: Lato;
   @include normal-type;
 
   @include media(tiny-mobile) {

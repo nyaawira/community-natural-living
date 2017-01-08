@@ -26,13 +26,14 @@ h1, h3 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @include source-sans-pro;
+  font-family: Lato;
   color: $emphasis;
 }
 
 h1 {
   margin: lines(0) 0 lines(0.5);
   font-weight: 700;
+  font-family: Lato;
 
   @include media(small-tablet) {
     @include large-type;
@@ -45,6 +46,7 @@ h2 {
   margin: lines(0) 0 lines(0.5);
   @include normal-type;
   font-weight: 500;
+  font-family: Lato;
 
   @include media(small-tablet) {
     @include big-type;

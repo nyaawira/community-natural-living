@@ -372,7 +372,8 @@ $home-list-avatar-padding: lines(0.25);
 .home-categories-link {
   display: block;
   color: $body;
-  text-transform: uppercase;
+  font-family: Lato;
+  
 
   &.selected {
     font-weight: bold;
@@ -390,6 +391,7 @@ $home-list-avatar-padding: lines(0.25);
 .home-categories-sub {
   @extend .home-categories-link;
   font-size: 14px;
+  font-family: Lato;
   margin-left: lines(0.5);
 }
 
