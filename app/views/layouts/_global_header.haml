@@ -1,3 +1,6 @@
+
+%nav.navbar.navbar-default.header-fixed-top.topnav{:role => "navigation"}
+
 -# Hide header in map view if mobile
 %header.header
   .header-wrapper
@@ -50,7 +53,7 @@
             -# Logo is here, it's a CSS background
         - else
           %span.header-square-logo-text.hidden-tablet
-            = @current_community.name(I18n.locale)[0]
+            = @current_community.name(I18n.locale)
         - if @current_community.wide_logo.present?
           %i.header-wide-logo.visible-tablet
             -# Logo is here, it's a CSS background
