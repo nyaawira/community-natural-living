@@ -1839,8 +1839,8 @@ en:
       grade: "grade:"
       and_gave_following_feedback: "and gave the following feedback"
     profile_listings:
-      show_also_closed: "Show my hidden posts."
-      show_only_open: "Show visible posts only."
+      show_also_closed: "Show my private posts."
+      show_only_open: "Show public posts only."
       no_image: "No image"
     show:
       contact: "Message %{person}"
@@ -2150,7 +2150,7 @@ en:
     days: days
   web:
     topbar:
-      menu: Menu
+      menu: 
       more: More
       search_placeholder: Search...
       search_location_placeholder: Location

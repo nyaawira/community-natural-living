@@ -1,7 +1,8 @@
 @import "mixins/all";
 
 .toggle-menu {
-  background: $light-body;
+  background: white;
+  font-color: black;
   border-color: $light-body !important;
   position: relative;
   z-index: 99999;
@@ -17,7 +18,7 @@
     &, .feedback {
       display: block;
       position: relative;
-      color: $background;
+      color: black;
       padding: lines(0.5);
       padding-right: lines(0.5);
     }
@@ -47,7 +48,7 @@
 
   .toggle-menu-title {
     @extend .toggle-menu-item;
-    background-color: lighten($light-body, 5%);
+    background-color: white;
   }
 
   p.login-form {
@@ -96,8 +97,8 @@
   }
 
   &.toggled {
-    background: $light-body;
-    color: $background !important;
+    background: white;
+    color: white !important;
     border-color: $light-body;
 
     @include media(tablet) {
@@ -136,6 +137,7 @@
   @include button-group-button-padding;
   height: $default-button-height;
   line-height: $default-button-line-height;
+  background-color: #2ab865;
 }
 
 .icon-dropdown {

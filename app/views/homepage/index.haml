@@ -81,6 +81,7 @@
               - shapes.each do |shape|
                 = link_to search_path(params.merge({transaction_type: shape[:name]})), class:  "toggle-menu-subitem" do
                   = t(shape[:name_tr_key])
+              = icon_tag("inline-big-button", ["icon-button"])
 
         - if @show_categories
           .toggle-container.home-toolbar-toggle-container.hidden-tablet
@@ -92,7 +93,7 @@
                   - else
                     = t("homepage.filters.all_categories")
 
-                = icon_tag("dropdown", ["icon-dropdown"])
+                = icon_tag("inline-big-button", ["icon-button"])
             #home-toolbar-categories-menu.toggle-menu
               = link_to t("homepage.filters.all_categories"), search_path(params.merge({category: "all"}))
               - @main_categories.each do |category|
