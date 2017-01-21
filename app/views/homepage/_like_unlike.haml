@@ -1,0 +1,8 @@
+- if @current_user.likes?(Listing.find(listing.id))
+  = link_to (image_tag 'heart_active.png', width: '30'), like_unlike_listing_path(listing.id), remote: true, method: :patch, class: 'home-fluid-thumbnail-grid-author-name heart_icon'
+- else
+  = link_to (image_tag 'heart_blank.png', width: '30'), like_unlike_listing_path(listing.id), remote: true, method: :patch, class: 'home-fluid-thumbnail-grid-author-name heart_icon'
+
+- if likes_count > 0
+  #like_count.home-fluid-thumbnail-grid-author-name.grid_like_count
+    = likes_count

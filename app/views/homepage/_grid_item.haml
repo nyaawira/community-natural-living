@@ -23,5 +23,6 @@
             - dist_string = "#{dist} #{listing.distance_unit}"
             .home-fluid-thumbnail-grid-details-distance{title: dist_string}
               = dist_string
-
-
+        - if @current_user
+          .like_unlike{:id => "like_unlike_#{listing.id}", data: {id: listing.id}}
+            = render partial: 'homepage/like_unlike', locals: {listing: listing, likes_count: listing[:likes_count]}

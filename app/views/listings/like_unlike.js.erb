@@ -1,1 +1,2 @@
 $('#heart_icon').html("<%=j render 'like_unlike', listing: listing, likes_count: @likes_count%>");
+$("#like_unlike_<%=listing.id%>").html("<%=j render partial: 'homepage/like_unlike', locals: { listing: listing, likes_count: @likes_count } %>");
