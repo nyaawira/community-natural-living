@@ -1,7 +1,14 @@
 form#s3-uploader{
   padding-bottom: 0;
 }
-
+.header{
+  position: fixed;
+  z-index: 9;
+  background: #fff;
+}
+.marketplace-lander, .title-header-wrapper{
+  padding-top: 60px;
+}
 @media only screen 
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
@@ -10,7 +17,6 @@ form#s3-uploader{
     display:none;
   }
 }
-
 @media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
