@@ -9,19 +9,6 @@ form#s3-uploader{
 .marketplace-lander, .title-header-wrapper{
   padding-top: 60px;
 }
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 480px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-  #OnboardingTopBar-react-component-0{
-    display:none;
-  }
-}
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 2) {
-  #OnboardingTopBar-react-component-0{
-    display:none;
-  }
+#OnboardingTopBar-react-component-0{
+  display:none;
 }
