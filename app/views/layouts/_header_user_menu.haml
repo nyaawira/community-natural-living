@@ -8,6 +8,10 @@
       .mobile-badge{:class => get_badge_class(unread_count)}
         = unread_count
 
+  = link_to new_listing_path, :class => "hidden-tablet" do
+    = icon_map_tag(icons, "new_listing", ["icon-with-text"])
+    = t("homepage.index.post_new_listing")
+
   = link_to profile_path do
     = icon_map_tag(icons, "user", ["icon-with-text"])
     = t("header.profile")
