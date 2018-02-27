@@ -425,3 +425,4 @@ The forum is a great place to ask support and help for example with issues durin
 ## MIT License
 
 Sharetribe is open source under the MIT license. See [LICENSE](LICENSE) for details.
+# community-natural-living
