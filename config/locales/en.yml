@@ -931,7 +931,7 @@ en:
       title_link_text: "%{community_name}"
       intro_paragraph: "Here are some of the things that happened on %{community_link} during the past %{time_since_last_update}."
       intro_paragraph_link_text: "%{community_name}"
-      post_a_new_listing: "Share a piece of your natural and healthy lifestyle!"
+      post_a_new_listing: "Add a Post!"
       reduce_email_footer_text: ""
       settings_link_text: ""
       unsubscribe_link_text: unsubscribe
